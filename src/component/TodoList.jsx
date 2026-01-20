@@ -11,16 +11,17 @@ import {
 import { array } from "firebase/firestore/pipelines";
 import { FaRegEdit } from "react-icons/fa";
 import { MdCancel, MdDelete } from "react-icons/md";
+import { db } from "../Firebase.config";
 
 function TodoList() {
-  const [task, settask] = useState();
-  const [edit, setEdit] = useState();
+  const [task, settask] = useState("");
+  const [edit, setEdit] = useState("");
   const [data, setData] = useState([]);
   const [showEdit, setShowEdit] = useState(false);
   const [id, setid] = useState(null);
  
 
-  const db = getDatabase();
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
