@@ -18,6 +18,7 @@ function TodoList() {
   const [data, setData] = useState([]);
   const [showEdit, setShowEdit] = useState(false);
   const [id, setid] = useState(null);
+ 
 
   const db = getDatabase();
 
@@ -60,6 +61,9 @@ function TodoList() {
   const handleUpdate = (id) => {
     setid(id);
     setShowEdit(!showEdit);
+    
+   
+
   };
 
   const handleEdit = (e) => {
@@ -72,7 +76,7 @@ function TodoList() {
       setEdit("");
     });
   };
-  console.log(id);
+
 
   return (
     <section className="w-full h-full pt-10 relative">
@@ -154,6 +158,7 @@ function TodoList() {
                   className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                   type="text"
                   placeholder="Add a task"
+                
                 />
 
                 <input
